@@ -2,14 +2,17 @@ class Mahasiswa {
   String nim;
   String nama;
   int tahunLahir;
-
+  
   Mahasiswa(this.nim, this.nama, this.tahunLahir);
-
+  
   void perkenalan() {
-    print("Perkenalkan, nama saya $nama");
+    int usia=DateTime.now().year-tahunLahir;
+    print("Perkenalkan, nama saya $nama dengan NIM $nim dan usia saya $usia tahun");
   }
 }
 
 void main() {
-  var mhs = Mahasiswa("H1D020068", "Abdalhaqq Muhammad Saih", 2002);
+  Mahasiswa mhs = Mahasiswa("H1D021035", "Yudith Nico Priambodo", 2003);
+  mhs.perkenalan();
+  
 }
